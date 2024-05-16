@@ -3,4 +3,4 @@
 
 
 ### Table of Contents
-- [word2vec](#word2vec/README.md)
+- [word2vec](word2vec/README.md)
