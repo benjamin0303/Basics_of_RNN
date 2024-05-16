@@ -3,5 +3,4 @@
 
 
 ### Table of Contents
-1. word2vec
-2. 
+- [word2vec](word2vec.md)
