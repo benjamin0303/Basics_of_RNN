@@ -17,4 +17,5 @@ The simplist way is to predict the blank only with the neighboring words. "you" 
 
 Continuous bag of words is a neural network model under wond2vec. It takes one-hot encoded corpus as an input and has a hidden layer, produces one-hot encoded vector as an output.
 
-![CBOW diagram](images/CBOW.png)
+<!--![CBOW diagram](images/CBOW.png) -->
+<img src="images/CBOW.png" alt="CBOW diagram" width="500"/>
