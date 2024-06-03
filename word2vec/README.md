@@ -22,7 +22,7 @@ Continuous bag of words is a neural network model under wond2vec. It takes one-h
 <!-- ![CBOW diagram](images/CBOW.png) This is how to make comment in HTML -->
 <img src="images/CBOW.png" alt="CBOW diagram" width="500"/>
 
-This diagram shows the structure of CBOW. \(W_{n-2}\)
+This diagram shows the structure of CBOW. \(W_{n-2})\
 
 $$
 W_{n-2}
