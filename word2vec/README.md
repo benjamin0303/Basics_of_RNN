@@ -17,15 +17,13 @@ The simplist way is to predict the blank only with the neighboring words.
 
 ### CBOW (Continuous Bag Of Words)
 
-Continuous bag of words is a neural network model under word2vec. It takes one-hot encoded corpus as an input and has a hidden layer, produces one-hot encoded vector as an output.
+Continuous Bag of Words (CBOW) is a neural network model under the word2vec framework. It takes a one-hot encoded corpus as input, has a hidden layer, and produces a one-hot encoded vector as output.
 
-<!-- ![CBOW diagram](images/CBOW.png) This is how to make comment in HTML -->
 <img src="images/CBOW.png" alt="CBOW diagram" width="500"/>
 
-This diagram shows the structure of CBOW. Here, we put 4 neighboring words to predict the blank. 2 before, and 2 afterwards. Each $w_{n-2}$ to $w_{n+2}$ are one-hot encoded vector for the word they represent. Also, the predicted output $w_{n}$ is the one-hot encoded vector.
+The diagram above illustrates the structure of the CBOW model. In this model, we use four neighboring words to predict the target word: two preceding and two following words. Each of the words $w_{n-2}$ to $w_{n+2}$ is represented as a one-hot encoded vector. The predicted output $w_{n}$ is also a one-hot encoded vector.
 
-Say the corpus has 100 distinct words. Then all $w_{n-2}$ to $w_{n+2}$ are 100-length vectors. They get multiplied by the weight_in matrix and become the hidden layer (length h). Therefore, the weight_in matrix has a shape of (100, h).
-$w_{n-2}$ to $w_{n+2}$ share this Weight_in matrix. 
+Assuming the corpus contains 100 distinct words, each vector $w_{n-2}$ to $w_{n+2}$ will be a 100-dimensional vector. These vectors are multiplied by the weight_in matrix, resulting in the hidden layer vectors. Consequently, the weight_in matrix has a shape of (100, h). All input vectors $w_{n-2}$ to $w_{n+2}$ share this weight_in matrix.
 
-By multipling 4 input vectors to one Weight_in matrix, we get 4 length h vectors.
-We sum these 4 vectors (of average) and make one length h vector. This vector gets multiplied by Weight_out matrix and become a length of 100 vector, reprensting the word in the blank $w_{n}$. Ergo, the Weight_out matrix has a shape (h, 100).
+By multiplying the four input vectors with the weight_in matrix, we obtain four h-dimensional vectors. These vectors are then summed (or averaged) to form a single h-dimensional vector. This vector is subsequently multiplied by the weight_out matrix, producing a 100-dimensional vector that represents the target word $w_{n}$. Therefore, the weight_out matrix has a shape of (h, 100).
+
