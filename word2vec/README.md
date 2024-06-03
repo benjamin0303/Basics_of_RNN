@@ -28,3 +28,4 @@ $$
 W_{n-2}
 $$
 
+![Equation](https://latex.codecogs.com/png.latex?%5Cfrac%7B1%7D%7B%5Csqrt%7B2%5Cpi%7D%7D%5Cexp%28-%5Cfrac%7Bx%5E2%7D%7B2%7D%29)
