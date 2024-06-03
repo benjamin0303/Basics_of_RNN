@@ -22,4 +22,4 @@ Continuous bag of words is a neural network model under wond2vec. It takes one-h
 <!-- ![CBOW diagram](images/CBOW.png) This is how to make comment in HTML -->
 <img src="images/CBOW.png" alt="CBOW diagram" width="500"/>
 
-This diagram shows the structure of CBOW. $E = mc^2$
+This diagram shows the structure of CBOW. Here, we put 4 neighboring words to predict the blank. 2 before, and 2 afterwards. Each $w_{n-2}$ to $w_{n+2}$ are one-hot encoded vector for the word. Also, the predicted output $w_{n}$ is the one-hot encoded vector. 
